@@ -32,12 +32,25 @@ public class QueryProcessor {
                 return largest + "";
             }
         }
+        else if(query.contains("plus")){
+            ArrayList<Integer> numbers = new ArrayList<>();
+            for(String numStrng : query.split("[^0-9]+")){
+                if(!numStrng.isEmpty()) {
+                    numbers.add(Integer.parseInt(numStrng));
+                }
+            }
+            int one = numbers.get(0);
+            int two = numbers.get(1);
+            int result = one + two;
+            return result + "";
+        }
         return "";
     }
 
     public static void main(String[] args) {
         QueryProcessor processor = new QueryProcessor();
         processor.process("largest numbers 10;3123;412 ");
+                System.out.println(processor.process("what is 2015 plus 2018"));
     }
 
 
