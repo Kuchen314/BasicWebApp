@@ -47,11 +47,7 @@ public class QueryProcessor {
         return "";
     }
 
-    public static void main(String[] args) {
-        QueryProcessor processor = new QueryProcessor();
-        processor.process("largest numbers 10;3123;412 ");
-                System.out.println(processor.process("what is 2015 plus 2018"));
-    }
+
 
 
 }
