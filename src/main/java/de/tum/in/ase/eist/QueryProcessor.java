@@ -32,7 +32,7 @@ public class QueryProcessor {
                         largest = numbers.get(i);
                     }
                 }
-                return largest + "";
+                return Integer.toString(largest);
             }
         }
         else if(query.contains("plus")){
@@ -48,7 +48,7 @@ public class QueryProcessor {
             int one = numbers.get(0);
             int two = numbers.get(1);
             int result = one + two;
-            return result + "";
+            return Integer.toString(result);
         }
         return "";
     }
