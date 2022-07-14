@@ -17,8 +17,9 @@ public class QueryProcessor {
            return "MyTeam";
         } else if(query.contains("largest")){
             if(query.contains("number")){
+                String input = query.substring(10);
                 ArrayList<Integer> numbers = new ArrayList<>();
-                for(String numStrng : query.split("[^0-9]+")){
+                for(String numStrng : input.split("[^0-9]+")){
                     if(!numStrng.isEmpty()) {
                         int test = Integer.parseInt(numStrng);
                         if(test != 20) {
@@ -37,7 +38,8 @@ public class QueryProcessor {
         }
         else if(query.contains("plus")){
             ArrayList<Integer> numbers = new ArrayList<>();
-            for(String numStrng : query.split("[^0-9]+")){
+            String input = query.substring(10);
+            for(String numStrng : input.split("[^0-9]+")){
                 if(!numStrng.isEmpty()) {
                     int test = Integer.parseInt(numStrng);
                     if(test != 20) {
@@ -56,7 +58,7 @@ public class QueryProcessor {
     public static void main(String[] args) {
         QueryProcessor processor = new QueryProcessor();
         processor.process("largest numbers 10;3123;412 ");
-                System.out.println(processor.process("what is 2015 plus 2018"));
+                System.out.println(processor.process("329ea7c0: what is 15 plus 18"));
     }
 
 
